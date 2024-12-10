@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RPGGameProject",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RPGGameProject::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RPGGameProject-Debug-4aa1858a735dc7cc1d2f.json",
+					"name" : "RPGGameProject",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug",
+		"source" : "C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
