@@ -3,6 +3,8 @@ project(RPGGameProject)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(${CMAKE_SOURCE_DIR}/src/Utils)
+
 add_executable(RPGGameProject src/main.cpp
         src/Entities/Role.cpp
         src/Entities/Role.hpp
@@ -22,7 +24,7 @@ add_executable(RPGGameProject src/main.cpp
         src/Entities/Inventory.hpp
         src/Entities/Item.cpp
         src/Entities/Item.hpp
-
+        src/Utils/StringUtils.hpp
 
 
 )

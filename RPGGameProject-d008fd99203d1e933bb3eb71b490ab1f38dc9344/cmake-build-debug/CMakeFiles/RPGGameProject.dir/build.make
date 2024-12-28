@@ -69,6 +69,7 @@ include CMakeFiles/RPGGameProject.dir/progress.make
 include CMakeFiles/RPGGameProject.dir/flags.make
 
 CMakeFiles/RPGGameProject.dir/src/main.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/main.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/main.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/main.cpp
 CMakeFiles/RPGGameProject.dir/src/main.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RPGGameProject.dir/src/main.cpp.obj"
@@ -83,6 +84,7 @@ CMakeFiles/RPGGameProject.dir/src/main.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\main.cpp -o CMakeFiles\RPGGameProject.dir\src\main.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Role.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.obj"
@@ -97,6 +99,7 @@ CMakeFiles/RPGGameProject.dir/src/Entities/Role.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Entities\Role.cpp -o CMakeFiles\RPGGameProject.dir\src\Entities\Role.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Entity.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.obj"
@@ -111,6 +114,7 @@ CMakeFiles/RPGGameProject.dir/src/Entities/Entity.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Entities\Entity.cpp -o CMakeFiles\RPGGameProject.dir\src\Entities\Entity.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Player.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.obj"
@@ -125,6 +129,7 @@ CMakeFiles/RPGGameProject.dir/src/Entities/Player.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Entities\Player.cpp -o CMakeFiles\RPGGameProject.dir\src\Entities\Player.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Game/Game.cpp
 CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.obj"
@@ -139,6 +144,7 @@ CMakeFiles/RPGGameProject.dir/src/Game/Game.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Game\Game.cpp -o CMakeFiles\RPGGameProject.dir\src\Game\Game.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Game/Combat.cpp
 CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.obj"
@@ -153,6 +159,7 @@ CMakeFiles/RPGGameProject.dir/src/Game/Combat.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Game\Combat.cpp -o CMakeFiles\RPGGameProject.dir\src\Game\Combat.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Enemy.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.obj"
@@ -167,6 +174,7 @@ CMakeFiles/RPGGameProject.dir/src/Entities/Enemy.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Entities\Enemy.cpp -o CMakeFiles\RPGGameProject.dir\src\Entities\Enemy.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Inventory.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.obj"
@@ -181,6 +189,7 @@ CMakeFiles/RPGGameProject.dir/src/Entities/Inventory.cpp.s: cmake_force
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\src\Entities\Inventory.cpp -o CMakeFiles\RPGGameProject.dir\src\Entities\Inventory.cpp.s
 
 CMakeFiles/RPGGameProject.dir/src/Entities/Item.cpp.obj: CMakeFiles/RPGGameProject.dir/flags.make
+CMakeFiles/RPGGameProject.dir/src/Entities/Item.cpp.obj: CMakeFiles/RPGGameProject.dir/includes_CXX.rsp
 CMakeFiles/RPGGameProject.dir/src/Entities/Item.cpp.obj: C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Entities/Item.cpp
 CMakeFiles/RPGGameProject.dir/src/Entities/Item.cpp.obj: CMakeFiles/RPGGameProject.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\nv\Desktop\RPGGGG\RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RPGGameProject.dir/src/Entities/Item.cpp.obj"

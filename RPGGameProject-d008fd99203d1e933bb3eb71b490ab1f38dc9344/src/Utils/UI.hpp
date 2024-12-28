@@ -13,9 +13,9 @@ public:
         std::cout << "=============================\n";
         std::cout << "    SELECTION DE CLASSE      \n";
         std::cout << "=============================\n";
-        std::cout << "1. Guerrier - Combattant de mêlée robuste avec une grande défense.\n";
-        std::cout << "2. Mage - Lanceur de sorts puissant mais fragile en défense.\n";
-        std::cout << "3. Archer - Combattant agile spécialisé dans les attaques à distance.\n";
+        std::cout << "1. Guerrier - Combattant de melee robuste avec une grande defense.\n";
+        std::cout << "2. Mage - Lanceur de sorts puissant mais fragile en defense.\n";
+        std::cout << "3. Archer - Combattant agile specialise dans les attaques a distance.\n";
         std::cout << "=============================\n";
     }
 

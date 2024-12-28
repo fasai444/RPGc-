@@ -24,6 +24,9 @@ public:
         std::uniform_int_distribution<> dis(min, max); // plage [min, max] d'entier
         return dis(gen);
     }
+    static int getRandomNumber(int min, int max) {  // Correct definition
+        return rand() % (max - min + 1) + min;
+    }
 
     template<typename T>
         static T validateInput(T& val, std::string message) {

@@ -37,7 +37,7 @@ void Entity::setName(std::string name) {
     this->name = name;
 }
 
-int Entity::getHP() {
+int Entity::getHP() const{
     return this->HP;
 }
 
