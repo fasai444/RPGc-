@@ -63,6 +63,26 @@
 					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="package">
+				<Option working_dir="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 package"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package_source">
+				<Option working_dir="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 package_source"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug"/>
 				<Option type="4"/>
@@ -130,6 +150,9 @@
 			<Option target="RPGGameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Game/Game.hpp">
+			<Option target="RPGGameProject"/>
+		</Unit>
+		<Unit filename="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Utils/EnhancedUI.hpp">
 			<Option target="RPGGameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/src/Utils/StringUtils.hpp">

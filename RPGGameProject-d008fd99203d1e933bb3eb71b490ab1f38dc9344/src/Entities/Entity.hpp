@@ -15,16 +15,17 @@ public:
     Entity(std::string name, int HP, int attack, int defense);
     virtual ~Entity() = default;
 
-    std::string getName();
+    std::string getName() const;
     void setName(std::string name);
 
     virtual void setStats();
     int getHP() const;
     void setHP(int HP);
-    int getAttack();
-    int getDefense();
 
-    bool isDead() const { return HP <= 0; }  // Check if HP is zero or negative
+    int getAttack() const;
+    int getDefense() const;
+
+    bool isDead() const { return HP <= 0; }
 };
 
 #endif //ENTITY_HPP

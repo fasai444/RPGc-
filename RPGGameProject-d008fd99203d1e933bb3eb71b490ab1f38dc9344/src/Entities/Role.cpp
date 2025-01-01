@@ -3,7 +3,8 @@
 //
 
 #include "Role.hpp"
-
+// Constructeur avec paramètres
+// Initialise un rôle avec un nom et des caractéristiques spécifiques
 Role::Role(std::string roleName, int vitality, int strength, int intel, int dexterity) {
     this->roleName = roleName;
     this->vitality = vitality;

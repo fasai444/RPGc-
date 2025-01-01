@@ -1,8 +1,11 @@
 #include "Combat.hpp"
-#include "../Utils/StringUtils.hpp" // Ajustez en fonction de votre structure de répertoires
-
-#include <iostream>
+#include "../Utils/StringUtils.hpp"
 #include "../Utils/Utils.hpp"
+#include "../Utils/EnhancedUI.hpp"  // Adjust the path based on your directory structure
+#include "UI.hpp"
+#include <chrono>
+#include <thread>
+#include <iostream>
 #include <algorithm>
 #include <cctype>
 
@@ -12,98 +15,129 @@ Combat::Combat() : player(*(new Player())), enemy(Enemy()) {
 }
 
 // Constructeur avec paramètres
+// Permet de démarrer un combat entre un joueur donné et un ennemi.
+// Si l'ennemi a des points de vie (> 0), le combat commence.
 Combat::Combat(Player &player, Enemy enemy) : player(player), enemy(enemy) {
     this->inCombat = enemy.getHP() > 0; // Vérifie si l'ennemi a des points de vie pour commencer le combat
 
     // Ajoute des objets à l'inventaire du joueur si non déjà présents
-    if (!player.getInventory().getItem("Épée en fer")) {
-        player.getInventory().addItem(Item("Épée en fer", "Weapon", 50)); // Arme de base
+    if (!player.getInventory().getItem("sword")) {
+        player.getInventory().addItem(Item("sword", "Weapon", 50)); // Arme de base
     }
-    if (!player.getInventory().getItem("Potion de vie")) {
-        player.getInventory().addItem(Item("Potion de vie", "Potion", 100)); // Potion de soin
+    if (!player.getInventory().getItem("Potion")) {
+        player.getInventory().addItem(Item("Potion", "Potion", 100)); // Potion de soin
     }
 }
 
 // Destructeur
 Combat::~Combat() {}
 
-// Boucle principale du combat
-void Combat::insideCombat() {
-    // Tant que ni le joueur ni l'ennemi ne sont morts
-    while (!player.isDead() && !enemy.isDead()) {
-        int choice;
-        std::cout << "Tour de " << player.getName() << "\n";
-        std::cout << "HP du " << enemy.getName() << " : " << enemy.getHP() << "\n";
+// Affiche l'interface de combat
+void displayCombatUI(const Player& player, const Enemy& enemy) {
+    UI::printCombatMenu(player, enemy);
+}
 
-        // Menu d'options pour le joueur
-        std::cout << "1. Attaquer\n";
-        std::cout << "2. Fuir\n";
-        std::cout << "3. Utiliser un objet\n";
-        Utils::validateInput(choice, "Que voulez-vous faire ? :");
+// Boucle principale du combat
+// Gère les actions du joueur et de l'ennemi jusqu'à ce que l'un d'eux soit vaincu.
+void Combat::insideCombat() {
+    while (!player.isDead() && !enemy.isDead()) {
+        EnhancedUI::displayCombatScreen(player, enemy); // Affiche l'état actuel du combat
+
+        int choice;
+        Utils::validateInput(choice, "Choose your action: ");
 
         switch (choice) {
-            case 1: { // Logique pour attaquer
-                int damage = player.getAttack(); // Obtenir les dégâts du joueur
-                enemy.setHP(enemy.getHP() - damage); // Réduire les HP de l'ennemi
-                std::cout << "Vous attaquez et infligez " << damage << " points de dégâts !" << std::endl;
-                std::cout << "Le " << enemy.getName() << " a maintenant " << enemy.getHP() << " HP." << std::endl;
+            case 1: {  // pour que le joueur attaque
+                int damage = player.getAttack();
+                enemy.setHP(enemy.getHP() - damage);
+                std::cout << Color::GREEN << "You attack and deal " << damage << " damage\n" << Color::RESET;
                 break;
             }
-            case 2: { // Logique pour fuir le combat
-                std::cout << "Vous fuyez le combat !" << std::endl;
-                return; // Sortir du combat
+            case 2: {  // fuir
+                std::cout << Color::YELLOW << "You flee from combat\n" << Color::RESET;
+                return;
             }
-            case 3: { // Utiliser un objet
-                if (!player.getInventory().isEmpty()) { // Vérifie si l'inventaire n'est pas vide
-                    player.getInventory().showInventory(); // Affiche l'inventaire
-                    std::cout << "Entrez le numéro de l'objet à utiliser : ";
+            case 3: {  // Utiliser un objet
+                if (!player.getInventory().isEmpty()) {
+                    // afficher inventory
+                    EnhancedUI::displayInventoryScreen(player.getInventory());
 
                     int itemIndex;
-                    Utils::validateInput(itemIndex, "Choisissez un numéro :"); // Valide l'entrée de l'utilisateur
+                    Utils::validateInput(itemIndex, "Enter the number of the item to use: ");
 
-                    // Vérifie si l'index est valide
+                    // objet selectionner
                     const auto& inventoryItems = player.getInventory().getItems();
                     if (itemIndex > 0 && itemIndex <= static_cast<int>(inventoryItems.size())) {
-                        const Item& item = inventoryItems[itemIndex - 1]; // Accède à l'objet via l'index
-                        if (item.getType() == "Potion") { // Si c'est une potion
-                            player.setHP(player.getHP() + item.getEffect()); // Restaure les HP du joueur
-                            std::cout << "Vous utilisez " << item.getName() << " et récupérez " << item.getEffect() << " HP.\n";
-                            player.getInventory().removeItem(item.getName()); // Supprime l'objet utilisé
-                        } else if (item.getType() == "Weapon") { // Si c'est une arme
+                        const Item& item = inventoryItems[itemIndex - 1];
+
+                        // Check the item type
+                        if (item.getType() == "Potion") {//utilisation d un objet
+                            player.setHP(player.getHP() + item.getEffect());
+                            std::cout << Color::GREEN << "You use " << item.getName() << " and recover "
+                                      << item.getEffect() << " HP.\n" << Color::RESET;
+                            player.getInventory().removeItem(item.getName());
+                        } else if (item.getType() == "Weapon") {//utiliser sword
                             int damage = item.getEffect();
-                            enemy.setHP(enemy.getHP() - damage); // Inflige des dégâts à l'ennemi
-                            std::cout << "Vous utilisez " << item.getName() << " et infligez " << damage << " points de dégâts !\n";
-                            std::cout << "Le " << enemy.getName() << " a maintenant " << enemy.getHP() << " HP.\n";
-                            player.getInventory().removeItem(item.getName()); // Supprime l'objet utilisé
+                            enemy.setHP(enemy.getHP() - damage);
+                            std::cout << Color::GREEN << "You use " << item.getName() << " and deal "
+                                      << damage << " damage to " << enemy.getName() << ".\n" << Color::RESET;
+                            player.getInventory().removeItem(item.getName());
                         } else {
-                            std::cout << "Cet objet n'est pas utilisable.\n";
+                            std::cout << Color::YELLOW << "This item cannot be used in combat.\n" << Color::RESET;
                         }
                     } else {
-                        std::cout << "Numéro invalide. Veuillez réessayer.\n";
+                        std::cout << Color::RED << "Invalid item selection.\n" << Color::RESET;
                     }
                 } else {
-                    std::cout << "Votre inventaire est vide.\n";
+                    std::cout << Color::RED << "Your inventory is empty.\n" << Color::RESET;
                 }
                 break;
             }
 
-            default: { // Si l'utilisateur entre une option invalide
-                std::cout << "Choix invalide.\n";
-                break;
-            }
+            default:
+                std::cout << Color::RED << "Invalid choice.\n" << Color::RESET;
+                continue;
         }
 
-        // Logique pour l'attaque de l'ennemi
+        // Enemy
         if (!enemy.isDead()) {
-            int damage = enemy.getAttack(); // Obtenir les dégâts de l'ennemi
-            player.setHP(player.getHP() - damage); // Réduire les HP du joueur
-            std::cout << "Le " << enemy.getName() << " vous attaque et inflige " << damage << " points de dégâts !" << std::endl;
-            std::cout << "Il vous reste " << player.getHP() << " HP." << std::endl;
+            if (enemy.getAbility() == "Poison") {
+                int poisonDamage = 5;
+                player.setHP(player.getHP() - poisonDamage);
+                std::cout << Color::RED << enemy.getName() << " uses Poison! You take "<< poisonDamage << " damage over time.\n" << Color::RESET;
+            } else if (enemy.getAbility() == "Stun") {
+                bool isStunned = Utils::getRandomNumber(0, 1);  // 50 chance
+                if (isStunned) {
+                    std::cout << Color::RED << enemy.getName() << " uses Stun! You are stunned and lose your next turn.\n" << Color::RESET;
+                    // Pause de 2 secondes
+                    std::this_thread::sleep_for(std::chrono::seconds(2));  // Pause for 2 seconds
+                    continue;
+                }
+            } else if (enemy.getAbility() == "Web Trap") {
+                int attackReduction = 3;
+                player.setAttack(player.getAttack() - attackReduction);
+                std::cout << Color::RED << enemy.getName() << " uses Web Trap! Your attack is reduced by "
+                          << attackReduction << " for the next 2 turns.\n" << Color::RESET;
+                std::this_thread::sleep_for(std::chrono::seconds(2));  // Pause for 2 seconds
+            }
+
+            //   Attaque basique de l'ennemi
+            int damage = enemy.getAttack();
+            player.setHP(player.getHP() - damage);
+            std::cout << Color::RED << enemy.getName() << " attacks and deals "
+                      << damage << " damage!\n" << Color::RESET;
         }
+    }
+    // Vérifie si le joueur ou l'ennemi a gagné
+    if (player.getHP() > 0) {
+        std::cout << Color::GREEN << "You defeated the enemy!\n" << Color::RESET;
+    } else {
+        std::cout << Color::RED << "You were defeated...\n" << Color::RESET;
     }
 }
 
+
 // Vérifie si l'ennemi est vaincu
 bool Combat::isEnemyDefeated() const {
-    return enemy.getHP() <= 0; // Renvoie vrai si les HP de l'ennemi sont <= 0
+    return enemy.getHP() <= 0;
 }

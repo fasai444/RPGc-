@@ -25,6 +25,7 @@ add_executable(RPGGameProject src/main.cpp
         src/Entities/Item.cpp
         src/Entities/Item.hpp
         src/Utils/StringUtils.hpp
+        src/Utils/EnhancedUI.hpp
 
 
 )

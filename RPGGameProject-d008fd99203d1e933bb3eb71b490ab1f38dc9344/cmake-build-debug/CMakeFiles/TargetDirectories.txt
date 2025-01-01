@@ -1,3 +1,5 @@
 C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/CMakeFiles/RPGGameProject.dir
+C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/CMakeFiles/package.dir
+C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/CMakeFiles/package_source.dir
 C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/nv/Desktop/RPGGGG/RPGGameProject-d008fd99203d1e933bb3eb71b490ab1f38dc9344/cmake-build-debug/CMakeFiles/rebuild_cache.dir

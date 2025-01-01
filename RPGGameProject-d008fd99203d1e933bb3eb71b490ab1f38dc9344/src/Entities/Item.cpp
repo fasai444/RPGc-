@@ -1,5 +1,5 @@
 #include "Item.hpp"
-
+//constructeur avec parametres
 Item::Item(const std::string& name, const std::string& type, int effect)
         : name(name), type(type), effect(effect) {}
 

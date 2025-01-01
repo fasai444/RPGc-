@@ -13,23 +13,25 @@
 class Utils {
 
 public:
+
     static void clearInput() {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
     static int generateRandomInt(int min, int max) {
-        std::random_device rd; //Génère un seed aléatoire
-        std::mt19937 gen(rd()); //Utilisation du générateur MersenTwister
-        std::uniform_int_distribution<> dis(min, max); // plage [min, max] d'entier
+        std::random_device rd; //
+        std::mt19937 gen(rd()); // générateur MersenTwister
+        std::uniform_int_distribution<> dis(min, max); // plage  d'entier
         return dis(gen);
     }
+
     static int getRandomNumber(int min, int max) {  // Correct definition
         return rand() % (max - min + 1) + min;
     }
 
     template<typename T>
-        static T validateInput(T& val, std::string message) {
+    static T validateInput(T& val, std::string message) {
 
         while (true) {
             std::cout << message;
@@ -43,8 +45,23 @@ public:
         clearInput(); // Nettoie les caractères restants après validation
         return val;
     }
+
+    //  renderLifeBar
+    static void renderLifeBar(const std::string& name, int currentHP, int maxHP) {
+        float hpPercentage = static_cast<float>(currentHP) / maxHP;
+        int barWidth = 20; // Width of the life bar
+        int filledWidth = static_cast<int>(hpPercentage * barWidth);
+
+        std::cout << name << " HP: [";
+        for (int i = 0; i < barWidth; ++i) {
+            if (i < filledWidth) {
+                std::cout << "#"; // Filled portion
+            } else {
+                std::cout << " "; // Empty portion
+            }
+        }
+        std::cout << "] " << currentHP << "/" << maxHP << "\n";
+    }
 };
-
-
 
 #endif //UTILS_HPP

@@ -1,5 +1,5 @@
 //
-// Created by alexi on 12/11/2024.
+//
 //
 
 #ifndef PLAYER_HPP
@@ -21,7 +21,10 @@ public:
     Player(Role &role);
 
     void setStats();
-    Inventory& getInventory(); // Getter for Inventory
+    Inventory& getInventory(); // Getter inventory
+
+    void setAttack(int newAttack);  // Add setter
+    int getAttack() const;
 };
 
 
